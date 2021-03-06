@@ -178,3 +178,124 @@ Errores lógicos: En estos la sintaxis es correcta, pero el código no hace lo q
 
 
 [========]
+
+## ANATOMÍA DE UNA DECLARACIÓN CSS: SELECTORES, PROPIEDADES Y VALORESANATOMÍA DE UNA DECLARACIÓN CSS: SELECTORES, PROPIEDADES Y VALORES
+
+Nuestros estilos con CSS se componen de:
+
+**Selector:** son la referencia a los elementos HTML que queremos estilizar. Los nombres de estas etiquetas van seguidas de una llave de apertura y otra de cierre ({}). Por ejemplo: h1 {}.
+
+**Propiedades:** son el tipo de estilo que queremos darle a nuestros elementos. Van seguidas de dos puntos (:). Las propiedades deben estar dentro de las llaves del selector que definimos anteriormente. Podemos escribir diferentes propiedades en un mismo selector. Por ejemplo: h1 { color: }.
+
+**Valores:** son el estilo que queremos que tomen nuestros elementos HTML con respecto a una propiedad. Van seguidas de un punto y coma (;). Por ejemplo: h1 { color: red; }.
+
+    h1 {
+      color: red;
+    }
+	
+
+[========]
+
+## Tipos de selectores, pseudo-clases y pseudo-elementos
+
+*(asterisco): Es el selector universal. Las propiedades se aplicaran a todos los elementos de nuestro HTML.
+
+**Tipo**: Son selectores que se aplican a cierto elemento HTML en específico. Las propiedades se aplicaran a la etiqueta que queremos, por ejemplo p, body, html, div, etc.
+
+**Clase:** Si nuestras etiqueta de HTML tienen un atributo de class podemos usar ese valor o identificador para que los cambios en el CSS afecten únicamente a ese elemento.
+
+**ID:** Es similar al anterior, si la etiqueta HTML tiene un ID podemos afectar solo ese elemento.
+
+Las Pseudo-clases y Pseudo-elementos nos permiten ser aún más específicos con qué elemento o partes de nuestros elementos deben recibir los estilos.
+
+Para usarlas debemos definir el selector base (por ejemplo, p) seguido de dos puntos y la pseudo-clase que queremos estilizar (por ejemplo: p:first-child). En el caso de los pseudo-elementos debemos usar el dos puntos 2 veces (p::first-letter).
+
+    /* Asterisco (universal) */
+    * {
+      margin: 0;
+    }
+    
+    /* Tipo */
+    h1 {
+      color: red;
+    }
+    
+    /* Clase */
+    .saludo {
+      font-size: 2em;
+    }
+    
+    /* ID */
+    #id {
+      border-radius: 20px;
+    }
+    
+    /* Pseudo-clases */
+    p:first-child {
+      color: white;
+    }
+    
+    p:last-child {
+      color: purple;
+    }
+    
+    p:nth-child(2n) {
+      color: red;
+    }
+    
+
+[========]
+
+## MODELO DE CAJA
+
+Todos los elementos de HTML tienen un modelo de caja y esta compuesto por cuatro elementos: **contenido, padding, border, margin**.
+
+[========]
+
+## VALORES RELATIVOS Y ABSOLUTOS
+
+Los valores absolutos son, por ejemplo, centímetros, milímetros, pixeles y pulgadas. Se llaman de esta forma porque no tienen en cuenta a nadie más, no depende de la medida de otra unidad.
+
+Los valores relativas, llevan este nombre porque depende de otra unidad de medida o elemento. Por ejemplo, porcentajes, vmx, em, entre otros.
+
+Recuerda que podemos darle estilos a etiquetas HTML muy específicas indicando dónde se van a encontrar. Por ejemplo: si queremos darle estilos únicamente a la imagen que está dentro del header, podemos usar el selector css header img { ... }.
+
+
+[========]
+
+
+## MODELO DE CAJA
+
+Todos los elementos de HTML tienen un modelo de caja y esta compuesto por cuatro elementos: **contenido, padding, border, margin**.
+
+[========]
+
+
+## VALORES RELATIVOS Y ABSOLUTOS
+
+Los valores absolutos son, por ejemplo, centímetros, milímetros, pixeles y pulgadas. Se llaman de esta forma porque no tienen en cuenta a nadie más, no depende de la medida de otra unidad.
+
+Los valores relativas, llevan este nombre porque depende de otra unidad de medida o elemento. Por ejemplo, porcentajes, vmx, em, entre otros.
+
+Recuerda que podemos darle estilos a etiquetas HTML muy específicas indicando dónde se van a encontrar. Por ejemplo: si queremos darle estilos únicamente a la imagen que está dentro del header, podemos usar el selector css header img { ... }.
+
+No olvides resolver el desafío: crear tu propio header con las etiquetas y estilos que más te gusten para compartirlo en la sección de discusiones.
+
+
+[========]
+
+## DISPLAY EN CSS
+<img src="https://static.platzi.com/media/user_upload/Display%20en%20CSS-634bc14a-bdf5-4337-a67d-49fc74f92a60.jpg" alt= "display css">
+
+
+[========]
+
+## POSICIONAMIENTO CSS
+<img src="https://static.platzi.com/media/user_upload/Posicionamiento%20en%20CSS-6477ec29-d5d2-44d0-b3f5-c2876e0ee739.jpg" alt="posicionamiento css">
+
+
+[========]
+
+
+
+
