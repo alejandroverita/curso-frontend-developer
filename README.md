@@ -297,5 +297,49 @@ No olvides resolver el desafío: crear tu propio header con las etiquetas y esti
 [========]
 
 
+## ¿QUÉ SON Y PARA QUÉ NOS SIRVEN LAS ARQUITECTURAS CSS?
+
+Los objetivos son:
+
+- Predecible > Escribir reglas claras.
+- Reutilizable > No escribir codigo redundante.
+- Mantenible > Que sea facil de leer y adaptarnos a los estandares.
+- Escalable > Que pueda crecer facilmente pero sin afectar el rendimiento.
+
+Buenas practicas
+
+- Establecer reglas para que el equipo se entienda.
+- Explicar la estructura base o dar los fundamentos del proyecto a un nuevo integrante.
+- Evitar hojas de estilo muy extensas
+- Tener una buena documentación explicando ciertos aspectos del codigo.
+
+
+[========]
+
+## OOCSS, BEM, SMACSS, ITCSS Y ATOMIC DESIGN
+
+**OOCSS:** CSS Orientado a Objetos
+
+**BEM**: Block Element Modifier
+
+__ Para elementos
+
+— Para modificadores
+
+**SMACSS:** Arquitectura de CSS Escalable y Modular: Se divide en 5 pasos
+
+1. Componentes Base
+2. Layout: Header o Footer, elementos que se utilizan una sóla vez
+3. Modulo: Componentes que estaríamos usando en nuestra aplicación más de una vez.
+4. State/Estado: Sirven para definir el estado de un componente luego de nuestra acción, por ejemplo, un botón que cambia de color después de ser pulsado.
+5. Theme/Temas: Cuando cambien los temas y cambiar los colores de nuestros elementos seleccionados para cambiar de tema.
+
+**ITCSS:**
+Inverted Triangle of CSS. Nos indica dividir nuestros archivos de CSS en ciertas partes
+
+**Atomic Design**
+Dividir nuestro CSS en pequeñas partes que van juntandose, por eso es llamado Atomic Design, desde moléculas hasta más grandes componente
+
+[========]
 
 
