@@ -1,0 +1,180 @@
+# CURSO DE FRONTEND DEVELOPER
+
+## HTML Y CSS: DEFINICIÓN Y USOS
+
+**Internet**
+A principios de los años 80 nació esta tecnología Interconected Network o red interconectada, y esta es la que hoy en día nos permite compartir sonidos, videos e imágenes.
+
+**WWW**
+En 1990 Word Wide Web; fue creada por Tim Berners-Lee el cual también creo el consorcio de la W3C
+
+**W3C**
+Word Wide Web Consortium y es el consorcio que estandariza y supervisa las tecnologías del internet HTTP, URL Y HTML
+
+- HTTP
+Hyper Text Transfer Potocol ó protocolo de transferencia de hipertexto es la bases que permite la comunicación entre los dispositivos conectados en la red por ejemplo computadores y servidores
+
+- URL
+Uniform Resource Locator ó el localizador de rescursos uniformes más conocido como la dirección de un sitio web, es la manera que agregamos un punto a la red
+
+- HTML
+Hyper Text Markup Language ó lenguaje de marcado de hiper text esta es lo que le da la estructura un sitio web como dándonos como herramienta: o lista encabezado, párrafo etc.
+
+- CSS
+Cascade style sheets ú Hoja de estilo en cascada la cual fue creada en 1994 y son unas series de reglas que describen la apariencia de un sitio web y es el navegador que se encarga de agregar estos estilos a nuestro sitio. esta surgió por la necesidad de mejorar la apariencia de los sitios web, en ella podemos definir el estilo de los componentes html como su tamaño, color, fuente entre otras cosas.
+
+
+[========]
+
+## ¿QUÉ SON Y PARA QUÉ NOS SIRVEN HTML Y CSS?
+
+**HTML:** Es un lenguaje de marcado usado para decirle a tu navegador cómo estructurar las páginas web que visitas. No es un lenguaje de programación.
+
+**CSS:** Es un lenguaje que nos permite crear páginas web con un diseño agradable para los usuarios. Tampoco es un lenguaje de programación.
+
+[========]
+
+## DOM, CSSOM, RENDER TREE Y EL PROCESO DE RENDERIZADO DE LA WEB
+
+- **DOM:** Document Object Model. Es una transformación del código HTML escrito por nosotros a objetos entendibles para el navegador.
+
+
+- **CSSOM:** así como el DOM para el HTML, EL CSSOM es una representación de objetos de nuestros estilos en CSS.
+
+- **Render Tree**: es la unión entre el DOM y el CSSOM para renderizar todo el código de nuestra página web.
+
+Pasos que sigue el navegador para construir las páginas web:
+
+1. Procesa el HTML para construir el DOM.
+2. Procesa el CSS para construir el CSSOM.
+3. El DOM se une con el CSSOM para crear el Render Tree.
+4. Se aplican los estilos CSS en el Render Tree.
+5. Se ““pintan”” los nodos en la pantalla para que los usuarios vean el contenido de la página web.
+
+[========]
+
+## 5 TIPS PARA APRENDER CSS
+<img src="https://static.platzi.com/media/user_upload/Infografia-Frontend-Javascript-86c602ef-a014-47d7-aadd-1293726d06b2.jpg" alt="tips css">
+
+
+[========]
+
+
+## ANATOMÍA DE UN ELEMENTO HTML: ATRIBUTOS, ANIDAMIENTO Y ELEMENTOS VACÍOS
+
+Nuestros elementos HTML se componen de:
+
+**Etiqueta de apertura:** el nombre de nuestra etiqueta encerrado entre símbolos de mayor o menor. Por ejemplo: `<h1>`.
+
+**Contenido:**  dentro de nuestras etiquetas podemos añadir texto u otros elementos HTML, lo que conocemos como anidamiento.
+
+**Etiqueta de cierre:** son casi iguales que las etiquetas de apertura, pero también necesitan un slash (/) antes del nombre de la etiqueta. Por ejemplo: `</h1>`.
+
+Las etiquetas de apertura también pueden tener atributos. Los atributos nos permiten definir características especiales para nuestros elementos: `<etiqueta atributo=""valor del atributo"">. Por ejemplo: <h1 class=""saludo"">.`
+
+También existen elementos vacíos. Estos elementos no tienen contenido ni etiqueta de cierre, solo etiqueta de apertura y atributos. Por ejemplo: 
+`<img src=""puppy.png"" alt=""mi mascota"">.`
+
+
+[========]
+
+## ANATOMÍA DE UN DOCUMENTO HTML: DOCTYPE, HTML, HEAD Y BODY
+
+**Indentación del código**
+
+Como se puede apreciar en la estructura de un documento html existen múltiples componentes html anidados en una jerarquía, es decir tenemos unos componentes html envueltos dentro de otros. Para poder identificar que componente html es el padre de otro, se debe realizar una indentación del código.
+
+**Documento html**
+Un documento html tiene una anatomía que necesita para que el navegador la pueda analizar correctamente., estas son los siguientes elementos con los cuales el navegador cuenta:
+`<!DOCTYPE html>`
+
+Indica al navegador el tipo de documento que se está mostrando y garantiza que el documento sea analizado de la misma manera en todos los navegadores
+
+`<html lang=”es”> … </html>`
+
+Es la etiqueta que envuelve todo el documento y es conocida como root element dentro de esta etiqueta existen dos hijos que son el head y el body:
+
+`<head> … </head>`
+
+La etiqueta head es la cabecera del documento y contiene etiquetas como: los metas, link de archivos css, title que describen al documento y describen que tipos de recursos se deben cargar.
+
+`<meta charset=”Utf8”>`
+
+hace referencia a la codificación de todos los caracteres y está incluyendo todos los idiomas.
+
+`<title>…</title>`
+
+
+hace referencia al título de nuestro documento html y que se visualiza en la pestaña de la web.
+
+`<body>…</body>.`
+
+Esta etiqueta es conocida como la etiqueta del cuerpo del documento y contiene otros elementos como
+
+- article: diferentes partes del contenido que pueden vivir por sí mismas.
+
+- nav: para hacer menús de navegación.
+
+- aside: contenido menos relevante, como publicidad, etc.
+
+- section: sirve para diferenciar las secciones principales del contenido.
+
+- header: cabecera del documento.
+
+- footer: pie de página del documento.
+
+- h1 - h6: títulos de nuestro sitio web.
+
+- table: tablas de contenidos, similar a la estructura de las hojas de cálculo.
+
+- ul y ol: listas de ítems.
+
+- div: cualquier división para organizar el contenido. El div no tiene ningún valor semántico.
+
+### Otras conclusiones Anatomía de un Documento HTML
+
+Es buena práctica que todas las etiquetas deben tener apertura y cierre incluso las etiquetas que se cierran en sí misma.
+
+Es importante resaltar que la indentación es sumamente importante para saber que elemento está dentro de otro. Es una buena práctica.
+
+Todos los elementos html tienen un modelo caja tiene tres propiedades importantes:
+- Margin
+- Border
+- Padding en la cual se puede apreciar en la sección: 5. Tips para aprender CSS
+
+[========]
+
+
+## FUNCIONES DE LAS ETIQUETAS HTML MÁS IMPORTANTES
+
+<img src ="https://static.platzi.com/media/user_upload/Funciones%20de%20las%20etiquetas-01-19c2a366-4d38-434c-8aaa-4b85276028dc.jpg" alt="etiquetas mas importantes">
+
+Etiquetas vacias 
+
+<img src ="https://static.platzi.com/media/user_upload/Funciones%20de%20las%20etiquetas-02-32fac483-1c4c-4518-8577-1c0a96103ac3.jpg" alt="Etiquetas vacias">
+
+
+Descripción de las etiquetas semánticas para la estructura base de nuestra página:
+
+<img src="https://static.platzi.com/media/user_upload/Funciones%20de%20las%20etiquetas-03-e3d21c27-3981-47fd-bdae-2df7becce6e5.jpg" alt="Etiquetas semanticas">
+
+
+[========]
+
+
+## LA IMPORTANCIA DEL CÓDIGO SEMÁNTICO
+
+Es importante que como desarrolladores tengamos claro el significado de escribir código. Debes ser consciente de que la manera en la que codeas tenga sentido.
+
+La semántica HTML no es más que darle sentido y estructura a lo que estas escribiendo. Muy importante para el navegador. No todos los elementos deberían ser un div.
+
+[========]
+
+## TIPOS DE ERRORES EN HTML, DEBUGGING Y SERVICIO DE VALIDACIÓN DE ETIQUETAS
+
+Errores sintácticos: Son errores de escritura en el código y evitan que el programa funcione. Pueden ser errores de tipado.
+
+Errores lógicos: En estos la sintaxis es correcta, pero el código no hace lo que debería. El programa funciona, pero de forma incorrecta.
+
+
+[========]
