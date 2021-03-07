@@ -342,4 +342,48 @@ Dividir nuestro CSS en pequeñas partes que van juntandose, por eso es llamado A
 
 [========]
 
+## CREACIÓN DE UN CAROUSEL DE IMÁGENES CON CSS: DETALLE DE CADA ITEM
+
+El selector ~ de CSS nos permite dar estilos a todos que cumplan los requisitos y sean “hermanos directos”, es decir, que tengan el mismo elemento padre.
+Por ejemplo:
+
+
+
+    .PrimerTitulo ~ h2 {
+      background-color: red;
+    }
+    <article class="ContenedorPadre">
+      <h2 class="PrimerTitulo">Este es el primer elemento H2</h2>
+      <!-- Este título tendrá color de fondo rojo -->
+      <h2>Este es el segundo elemento H2</h2>
+      <div class="ElementoPadreDiferente">
+          <!-- Este título NO tendrá color de fondo rojo porque su padre es diferente -->
+        <h2>Este es el tercer elemento H2</h2>
+      </div>
+      <!-- Este título también tendrá color de fondo rojo -->
+      <h2>Este es el cuarto elemento H2</h2>
+    </article>
+
+
+También existe el selector +. Solo aplica los estilos al primer hermano directo de nuestros elementos.
+Por ejemplo:
+
+
+
+    .PrimerTitulo + h2 {
+      background-color: blue;
+    }
+    <article class="ContenedorPadre">
+      <h2 class="PrimerTitulo">Este es el primer elemento H2</h2>
+      <!-- Este título SÍ tendrá color de fondo azul -->
+      <h2>Este es el segundo elemento H2</h2>
+      <div class="ElementoPadreDiferente">
+          <!-- Este título NO tendrá color de fondo azul -->
+        <h2>Este es el tercer elemento H2</h2>
+      </div>
+      <!-- Este título no tendrá color de fondo azul -->
+      <h2>Este es el cuarto elemento H2</h2>
+    </article>
+
+    
 
