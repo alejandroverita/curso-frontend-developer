@@ -385,5 +385,33 @@ Por ejemplo:
       <h2>Este es el cuarto elemento H2</h2>
     </article>
 
-    
+[========]
 
+## FLEXBOX
+
+Enlaces de interes
+
+[Flexbox Froggy](https://flexboxfroggy.com/#es "Flexbox Froggy")
+[Mozilla Developers](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox "Mozilla Developers")
+[Css tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/ "Css tricks")
+
+
+[========]
+
+## CSS GRID
+
+Enlaces de interes
+
+[Grid Garden](https://cssgridgarden.com/#es "Grid Garden")
+[Mozilla Developers Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid "Mozilla Developers Grid")
+[CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/ "CSS Grid")
+
+
+[========]
+
+## MAQUETACION DE LA PANTALLA DE LOGIN: ESTRUCTURA HTML
+
+
+## MAQUETACION DE LA PANTALLA DE LOGIN: ESTILIZACION CON CSS
+
+## ESTILIZACION DE INPUTS Y FOOTER EN LA PANTALLA DE LOGIN

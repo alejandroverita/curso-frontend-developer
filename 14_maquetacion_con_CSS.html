@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de un carousel de imagenes con CSS. Detalle de cada item</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+</head>
+<style>
+
+    :root{
+        -–purple: #5E1DFC;
+        –-purple-mid: #8F57FD;
+        –-purple-light: #AB88FF;
+        –-mint: #21c08b;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body {
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        background: linear-gradient(to right, #4286f4, #373B44);
+        font-family: 'Muli', sans-serif;
+    }
+
+    header {
+        
+        background: #373B44;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__img{
+        width: 200px;
+        margin: 10px 0px 0px 10px;
+    }
+
+    .header__menu {
+        margin: 10px 30px 0px 10px;
+    }
+
+    .header__menu ul {
+        display: none;
+        margin-top: 5px;
+        list-style: none;
+        padding: 0px;
+        position: absolute;
+        width: 100px;
+        text-align: right;
+    }
+
+    .header__menu:hover ul, ul:hover{
+        display: block
+    }
+
+    .header__menu li {
+        margin: 5px 0px;
+    }
+
+    .header__menu li a {
+
+        color: white;
+        text-decoration: none;
+    }
+
+    .header__menu li a:hover {
+
+        text-decoration: underline;
+    }
+
+
+    .header__menu--profile {
+        /* width: 40px; */
+        margin: 10px 8px 0px 10px;
+        display: flex;
+        color: white;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .header__menu--profile p {
+        margin-left: 10px;
+    }
+
+   .form{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction:column;
+       padding: 0px 30px;
+       min-height: calc(100vh -200px);
+   }
+
+   .form__container {
+       background-color: rgba(255, 255, 255, 0.1);
+       border: 2px solid white;
+       border-radius: 40px;
+       color: white;
+       padding: 60px 60px 40px;
+       min-height: 700px;
+       width: 300px;
+   }
+
+   .form__input{
+       display:flex;
+       flex-direction: column;
+   }
+
+   .form__input label {
+       font-size: 1.4rem;
+   }
+
+   .form__checkbox{
+
+       color: white;
+       display: flex;
+       justify-content: space-between;
+       margin-top: 10px;
+
+   }
+   .form__checkbox a {
+
+       color: white;
+       font-size: 1.4rem;
+       text-decoration:none;
+
+   }
+
+   .form__checkbox a:hover {
+       text-decoration: underline;
+   }
+
+   .login__container--social > div { /* a todos los div dentro del contenedor login__container--social */
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+   }
+</style>
+
+<body>
+    <header class="header">
+        <img class="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="Logo">
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="./user-icon.png" alt="Profile">
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="">Cuenta</a></li>
+                <li><a href="">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="form">
+        <section class="form__container">
+            <h2 class="form__title"></h2>
+            <form class="form__input">
+                <input class="input" type="text" placeholder="Correo">
+                <input class="input" type="password" placeholder="Contraseña">
+                <button class="button">
+                    Iniciar sesion
+                </button>
+                <div class="form__checkbox">
+                    <label for="">
+                        <input type="checkbox" name="" id="cbox1" value="checkbox">Recuerdame
+                    </label>
+                    <a href="/">
+                        Olvide mi contraseña
+                    </a>
+                </div>
+            </form>
+       
+            <section class="login__container--social">
+                <div><img src="./google-icon.png" alt="Google Icon"> Inicia sesion con Google</div>
+                <div><img src="./twitter-icon.png" alt="Twitter icon">Inicia sesion con Twitter</div>
+            </section>
+            <p class="login__container--register">No tienes ninguna cuenta <a href="/">Registrate</a></p>
+        </section>
+    </section>
+    <footer class="footer">
+        <a href="/">Terminos de uso</a>
+        <a href="/">Declaracion de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+</body>
+</html>
