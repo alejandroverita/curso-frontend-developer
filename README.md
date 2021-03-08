@@ -411,7 +411,25 @@ Enlaces de interes
 
 ## MAQUETACION DE LA PANTALLA DE LOGIN: ESTRUCTURA HTML
 
+[========]
 
 ## MAQUETACION DE LA PANTALLA DE LOGIN: ESTILIZACION CON CSS
 
+[========]
+
 ## ESTILIZACION DE INPUTS Y FOOTER EN LA PANTALLA DE LOGIN
+
+[========]
+
+## MEDIA QUERIES
+
+Los media queries nos ayudan a ajustar nuestros diseño a dispositivos más pequeños como tablets y celulares.
+
+Es recomendable seguir la metodología de Mobile First: comenzar a diseñar para el dispositivo más pequeño e ir creando las media queries para las pantallas más grandes.
+
+Si no les funcionan los MediaQuery es porque les hace falta un meta dato para que los reconozca
+
+`<meta name="viewport" content="width=device-width, initial-scale=1">`
+
+[========]
+
