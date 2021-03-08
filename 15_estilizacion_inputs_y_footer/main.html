@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetacion Principal</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+</head>
+<style>
+
+    :root{
+        -–purple: #5E1DFC;
+        –-purple-mid: #8F57FD;
+        –-purple-light: #AB88FF;
+        –-mint: #21c08b;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body {
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        background: linear-gradient(to right, #4286f4, #373B44);
+        font-family: 'Muli', sans-serif;
+    }
+
+    header {
+        
+        background: #373B44;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__img{
+        width: 200px;
+        margin: 10px 0px 0px 10px;
+    }
+
+    .header__menu {
+        margin: 10px 30px 0px 10px;
+    }
+
+    .header__menu ul {
+        display: none;
+        margin-top: 5px;
+        list-style: none;
+        padding: 0px;
+        position: absolute;
+        width: 100px;
+        text-align: right;
+    }
+
+    .header__menu:hover ul, ul:hover{
+        display: block
+    }
+
+    .header__menu li {
+        margin: 5px 0px;
+    }
+
+    .header__menu li a {
+
+        color: white;
+        text-decoration: none;
+    }
+
+    .header__menu li a:hover {
+
+        text-decoration: underline;
+    }
+
+
+    .header__menu--profile {
+        /* width: 40px; */
+        margin: 10px 8px 0px 10px;
+        display: flex;
+        color: white;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .header__menu--profile p {
+        margin-left: 10px;
+    }
+
+    /* SECCION DE BUSCADOR */
+   
+    .main {
+        height: 300px;
+        padding: 30px;
+        margin: auto;
+    }
+
+    .main__title {
+        color: white;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .categories__title{
+        color: white;
+        font-size: 1.6rem;
+        position:absolute;
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    .input__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input{
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid #FFFFFF;
+        border-radius: 25px;
+        color: white;
+        font-size: 1.6rem;
+        height: 50px;
+        outline: none;
+        padding: 0 20px;
+        width: 70%;
+    }
+
+    ::placeholder{
+        color: white;
+    }
+
+    /* SECCION CARRUSEL */
+
+    .carousel {
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative; /* todos los elementos dentro de el se posicionan de manera relativa a este container */
+
+    }
+
+    .carousel__container {
+        white-space: nowrap; /* pa que no vaya pa abajo */
+        margin: 70px 0px;
+        padding-bottom: 10px;
+
+    }
+/* DESPLAZAMIENTO LATERAL */
+    .carousel__container {
+        transition: 450ms -webkit-transform;
+        transition: 450ms transform;
+        transition: 450ms transform, 450ms -webkit-transform;
+        font-size: 0;
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+
+    .carousel__container:hover .carousel-item {
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel-item:hover {
+        -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+        opacity: 1;
+    }
+
+/* FIN DESPLAZAMIENTO LATERAL */
+
+    .carousel__item {
+        
+        background-color: #aeabab;
+        width: 250px;
+        height: 300px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transform-origin: center left;
+        transition: 450ms all;
+        position: relative;
+    }
+
+    .carousel__item:hover ~ .carousel__item { /* ~ cualquier elemento carousel__item que este despues de carouse__item:hover */
+        transform: translate3d(100px, 0, 0);
+    }
+
+    .carousel__container:hover .carousel__item {
+
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel__item:hover{
+        transform: scale(1.5); /* un incremento del 50% del tamaño original */
+        opacity: 1;
+    }
+
+    .carousel__item--img {
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .carousel__item--details{
+        
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100% );
+        font-size: 1rem;
+        opacity: 1;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    .carousel__item--details img{
+        height: 15px;
+    }
+
+    .carousel__item--details p {
+        margin: 0px;
+        color: white;
+    }
+
+    .carousel__item--details:hover {
+        opacity: 1;
+        color: white;
+    }
+
+    .footer {
+       display: flex;
+       align-items:center;
+       height: 100px;
+       width: 100%;
+       justify-content: space-evenly;
+   }
+
+   .footer a {
+       color: white;
+       cursor: pointer;
+       text-decoration: none;
+       font-size: 1.4rem;
+       padding-left: 30px;
+       
+   }
+
+   .footer a:hover {
+       text-decoration: underline;
+   }
+
+</style>
+
+<body>
+    <header class="header">
+        <img class="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="Logo">
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="../user-icon.png" alt="Profile">
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="">Cuenta</a></li>
+                <li><a href="">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <section class="main">
+        <h2 class="main__title">¿Que deseas ver hoy?</h2>
+        <div class="input__container">
+            <input type="text" class="input" placeholder="Buscar...">
+        </div>
+    </section>
+
+    <h2 class="categories__title">Mi lista</h2>
+
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel__item">
+                <img class="carousel__item--img" src="../pexels-eva-elijas-5766435.jpg" alt="Puente">
+                <div class="carousel__item--details">
+                    <div>
+                        <img src="../play-icon.png" alt="Dale play">
+                        <img src="../plus-icon.png" alt="Ver mas">
+                    </div>
+                    <p class="carousel__item--details-title">
+                        Titulo
+                    </p>
+                    <p class="carousel__item--details-subtitle">
+                        2021 16+4
+                    </p>
+                </div>
+            </div>
+            <div class="carousel__item">
+                <img class="carousel__item--img" src="https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260"" alt="Puente">
+                <div class="carousel__item--details">
+                    <div>
+                        <img src="../play-icon.png" alt="Dale play">
+                        <img src="../plus-icon.png" alt="Ver mas">
+                    </div>
+                    <p class="carousel__item--details-title">
+                        Titulo
+                    </p>
+                    <p class="carousel__item--details-subtitle">
+                        2021 16+4
+                    </p>
+                </div>
+            </div>
+            <div class="carousel__item">
+                <img class="carousel__item--img" src="https://images.pexels.com/photos/1427741/pexels-photo-1427741.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Puente">
+                <div class="carousel__item--details">
+                    <div>
+                        <img src="../play-icon.png" alt="Dale play">
+                        <img src="../plus-icon.png" alt="Ver mas">
+                    </div>
+                    <p class="carousel__item--details-title">
+                        Titulo
+                    </p>
+                    <p class="carousel__item--details-subtitle">
+                        2021 16+4
+                    </p>
+                </div>
+            </div>
+            <div class="carousel__item">
+                <img class="carousel__item--img" src="https://images.pexels.com/photos/705792/pexels-photo-705792.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Puente">
+                <div class="carousel__item--details">
+                    <div>
+                        <img src="../play-icon.png" alt="Dale play">
+                        <img src="../plus-icon.png" alt="Ver mas">
+                    </div>
+                    <p class="carousel__item--details-title">
+                        Titulo
+                    </p>
+                    <p class="carousel__item--details-subtitle">
+                        2021 16+4
+                    </p>
+                </div>
+            </div>
+            <div class="carousel__item">
+                <img class="carousel__item--img" src="https://images.pexels.com/photos/904276/pexels-photo-904276.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Puente">
+                <div class="carousel__item--details">
+                    <div>
+                        <img src="../play-icon.png" alt="Dale play">
+                        <img src="../plus-icon.png" alt="Ver mas">
+                    </div>
+                    <p class="carousel__item--details-title">
+                        Titulo
+                    </p>
+                    <p class="carousel__item--details-subtitle">
+                        2021 16+4
+                    </p>
+                </div>
+            </div>
+
+            <div class="carousel__item">
+                <img class="carousel__item--img" src="https://images.pexels.com/photos/1172207/pexels-photo-1172207.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&w=500" alt="Puente">
+                <div class="carousel__item--details">
+                    <div>
+                        <img src="../play-icon.png" alt="Dale play">
+                        <img src="../plus-icon.png" alt="Ver mas">
+                    </div>
+                    <p class="carousel__item--details-title">
+                        Titulo
+                    </p>
+                    <p class="carousel__item--details-subtitle">
+                        2021 16+4
+                    </p>
+                </div>
+            </div>
+
+            <div class="carousel__item">
+                <img class="carousel__item--img" src="https://images.pexels.com/photos/413879/pexels-photo-413879.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Puente">
+                <div class="carousel__item--details">
+                    <div>
+                        <img src="../play-icon.png" alt="Dale play">
+                        <img src="../plus-icon.png" alt="Ver mas">
+                    </div>
+                    <p class="carousel__item--details-title">
+                        Titulo
+                    </p>
+                    <p class="carousel__item--details-subtitle">
+                        2021 16+4
+                    </p>
+                </div>
+            </div>
+
+            <div class="carousel__item">
+                <img class="carousel__item--img" src="https://images.pexels.com/photos/1666779/pexels-photo-1666779.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Puente">
+                <div class="carousel__item--details">
+                    <div>
+                        <img src="../play-icon.png" alt="Dale play">
+                        <img src="../plus-icon.png" alt="Ver mas">
+                    </div>
+                    <p class="carousel__item--details-title">
+                        Titulo
+                    </p>
+                    <p class="carousel__item--details-subtitle">
+                        2021 16+4
+                    </p>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+    <footer class="footer">
+        <a href="/">Terminos de uso</a>
+        <a href="/">Declaracion de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+</body>
+</html>
