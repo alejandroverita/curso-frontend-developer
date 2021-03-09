@@ -433,3 +433,147 @@ Si no les funcionan los MediaQuery es porque les hace falta un meta dato para qu
 
 [========]
 
+## MAQUETACION DE LA PANTALLA PRINCIPAL
+
+[========]
+
+## ¿QUÉ ES UN PREPROCESADOR, CUÁLES EXISTEN Y CUÁLES SON SUS DIFERENCIAS?
+
+CSS es un lenguaje de hojas de estilo que nos permite crear sitios web agradables para el usuario, sin embargo, nuestros archivos de CSS suelen ser bastante extensos, lo que produce una demanda significativa de nuestro tiempo y puede generar un trabajo menos productivo.
+
+Una de las cosas que puedes hacer para evitar tantas líneas de código es utilizar los preprocesadores de CSS, los cuales extienden las funcionalidades de CSS común, permitiéndonos tener variables, funciones, mixins, reutilización de código, flexibilidad en el desarrollo, etc.
+
+**Pero, ¿cómo es que funcionan los preprocesadores?**
+
+Un preprocesador se escribe con una sintaxis especial que nosotros le indicamos y debe compilarse a CSS para ser comprendido por el navegador. En sí lo que estamos haciendo es CSS pero con esteroides.
+
+<img src="https://static.platzi.com/media/user_upload/Que%20es%20un%20preprocesador-e37c3f15-9bc9-493a-ba6f-290600119061.jpg" alt="que es un preprocesador">
+
+Esta sintaxis que te menciono depende de cada preprocesador. Los más conocidos y usados son: LESS, SASS y Stylus. ¿Cuál usar? En mi opinión personal, esta decisión depende más de tus gustos personales y de qué tan cómodo o cómoda te sientas con una sintaxis o con otra, sin embargo, es también importante que dialogues con tu equipo y evalúen con qué preprocesador quieren trabajar dependiendo de las necesidades del proyecto.
+
+Documentación oficial 
+
+[SAAS](https://sass-lang.com/guide "SAAS")
+[LESS](http://lesscss.org/ "LESS")
+[STYLUS](http://stylus-lang.com/ "STYLUS")
+
+
+[========]
+
+## INSTALACIÓN DE SASS Y CONFIGURACIÓN INICIAL
+
+Instalación de SASS con NPM:
+
+`npm install -g sass`
+
+Si usas Windows puedes usar el gestor de paquetes Chocolatey Package Manager e instalar SASS con el siguiente comando:
+
+`choco install sass`
+
+Si usas Mac puedes usar Homebrew para instalar SASS con el siguiente comando:
+
+`brew install sass/sass/sass`
+
+
+[========]
+
+## VARIABLES, HERENCIA, ANIDAMIENTO, OPERADORES Y MÁS
+
+**VARIABLES:**
+
+Definimos la variable con $nombreDeVariable:
+
+`$blanco : #fff;`
+
+Para usar nuestra variable por ejemplo en las etiquetas ancla:
+
+	a {
+	color: $blanco
+	}
+
+**ANIDAMIENTO:**
+
+Para usar una regla de estilos dentro de otra:
+
+
+	.login__container—register {
+	font-size: 14px;
+	a {
+		color: $blanco;
+		font-weight: bold;
+		text-decoration: none;
+	}
+}
+
+En vez de como las teníamos antes:
+
+
+	.login__container—register {
+	font-size: 14px;
+	 }
+	.login__container—register a {
+	color: $blanco;
+	font-weight: bold;
+	text-decoration: none;
+	}
+	
+
+**HERENCIA EN SASS:**
+
+Definimos una regla de estilos:
+
+
+	.flex {
+	display: flex;
+	align-items: center;
+	}
+
+Y para heredarla a otra regla o elementos:
+
+	.header {
+	@extend .flex
+	background-color: #000;
+	heigth: 100px;
+	width: 100%;
+	}
+
+**MIXINS**
+
+
+Se define el mixing con: @mixin nombre (sin punto precediendo el nombre)
+
+
+	@mixin flex {
+	display: flex;
+	align-items: center;
+	}
+
+Para aplicarlo: donde se quiera incluir se pone @include nombre;
+
+
+	.header {
+	@include flex;
+	background-color: #000;
+	heigth: 100px;
+	width: 100%;
+	}
+
+[========]
+
+
+## ACCESIBILIDAD
+
+Debemos pensar en esas personas con una discapacidad visual que no tienen la posibilidad de ver lo mismo que la mayoría de nosotros. Estas personas no siempre usan el mouse, sino lectores de pantalla.
+
+Un Lector de Pantalla se encarga de leer toda la aplicación elemento por elemento. Que los lectores de pantalla funcionen es responsabilidad de las y los desarrolladores: debemos tener muy buena semántica, usar las etiquetas y atributos adecuados entre otras.
+
+<img src="https://static.platzi.com/media/user_upload/importancia-de-la-accesibilidad-web-scaled-a75bff44-66a4-4fd5-9644-013ee25aa04d.jpg" alt="importancia de la accesibilidad web">
+
+[========]
+
+
+## MEJORANDO LA ACCESIBILIDAD DE NUESTRA PÁGINA DE INICIO
+[ANDI](https://www.ssa.gov/accessibility/andi/help/install.html "ANDI")
+[tabindex](https://developer.mozilla.org/es/docs/Web/HTML/Global_attributes/tabindex "tabindex")
+
+[========]
